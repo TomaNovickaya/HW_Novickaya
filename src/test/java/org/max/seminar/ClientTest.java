@@ -38,12 +38,15 @@ public class ClientTest extends AbstractTest {
         String sql = "SELECT * FROM client WHERE client_id=" + id;
         Statement stmt  = getConnection().createStatement();
         String name = "";
+        String lastname = "";
         //when
         ResultSet rs = stmt.executeQuery(sql);
         while (rs.next()) {
             name = rs.getString(3);
+            lastname = rs.getString("last_name");
         }
         //then
         Assertions.assertEquals(lastName, name);
+        Assertions.assertEquals(lastName, lastname);
     }
 }

@@ -36,7 +36,7 @@ public class CreditTest extends AbstractTest {
     void addCredit_whenValid_shouldSave() {
         //given
         CreditEntity entity = new CreditEntity();
-        entity.setCreditId((short) 2);
+        entity.setCreditId((short) 3);
         entity.setBalance("1000");
         entity.setCloseDate("2033-02-01 00:00:00");
         entity.setOpenDate("2033-02-01 00:00:00");
@@ -52,11 +52,12 @@ public class CreditTest extends AbstractTest {
         session.getTransaction().commit();
 
         final Query query = getSession()
-                .createSQLQuery("SELECT * FROM credit WHERE credit_id="+2).addEntity(CreditEntity.class);
+                .createSQLQuery("SELECT * FROM credit WHERE credit_id="+3).addEntity(CreditEntity.class);
         CreditEntity creditEntity = (CreditEntity) query.uniqueResult();
         //then
         Assertions.assertNotNull(creditEntity);
         Assertions.assertEquals("1000", creditEntity.getBalance());
+        Assertions.assertEquals("100", creditEntity.getNumber());
     }
 
     @Test

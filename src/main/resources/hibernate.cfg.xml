@@ -16,16 +16,16 @@
         <mapping class="org.max.home.OrdersProductsEntity"/>
         <mapping class="org.max.home.ProductsEntity"/>-->
 
-        <property name="connection.url">jdbc:sqlite:demo.db</property>
-        <mapping class="org.max.demo.EmployeeEntity"/>
-        <mapping class="org.max.demo.EmployeeInfoEntity"/>
+<!--        <property name="connection.url">jdbc:sqlite:demo.db</property>-->
+<!--        <mapping class="org.max.demo.EmployeeEntity"/>-->
+<!--        <mapping class="org.max.demo.EmployeeInfoEntity"/>-->
 
-<!--        <property name="connection.url">jdbc:sqlite:seminar.db</property>
+        <property name="connection.url">jdbc:sqlite:seminar.db</property>
         <mapping class="org.max.seminar.ClientEntity"/>
         <mapping class="org.max.seminar.CreditEntity"/>
         <mapping class="org.max.seminar.CurrentEntity"/>
         <mapping class="org.max.seminar.DebitEntity"/>
-        <mapping class="org.max.seminar.EmployeeEntity"/>-->
+        <mapping class="org.max.seminar.EmployeeEntity"/>
 
         <!-- <property name="connection.username"/> -->
         <!-- <property name="connection.password"/> -->
