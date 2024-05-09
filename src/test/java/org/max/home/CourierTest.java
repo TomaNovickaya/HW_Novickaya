@@ -45,6 +45,7 @@ public class CourierTest extends AbstractTest{
         //when
         ResultSet rs = stmt.executeQuery(sql);
         while (rs.next()) {
+            //для получения фамилии нужно использовать индекс 3
             nameString = rs.getString(2);
         }
         //then
